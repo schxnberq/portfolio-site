@@ -1,0 +1,292 @@
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #2e2e2e;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+* {
+	box-sizing: border-box;
+}
+ul, ol {
+	list-style-type: none;
+	padding-left: 0;
+}
+/* --- FONTS --- */
+
+@font-face {
+	font-family: 'fontawesome';
+       src:url('../fonts/fontawesome/fontawesome-webfont.eot');
+       src:url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'),
+        url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'),
+        url('../fonts/fontawesome/fontawesome-webfont.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'aqua grotesque';
+       src:url('../fonts/aqua-grotesque/aqua.eot');
+       src:url('../fonts/aqua-grotesque/aqua.woff') format('woff'),
+        url('../fonts/aqua-grotesque/aqua.ttf') format('truetype'),
+        url('../fonts/aqua-grotesque/aqua.svg') format('svg');
+}
+
+@font-face {
+	font-family: 'poiretone';
+       src:url('../fonts/poiretone/PoiretOne-Regular.eot');
+       src:url('../fonts/poiretone/PoiretOne-Regular.woff') format('woff'),
+        url('../fonts/poiretone/PoiretOne-Regular.ttf') format('truetype'),
+        url('../fonts/poiretone/PoiretOne-Regular.svg') format('svg');
+}
+
+/* --- KEYFRAMES --- */
+
+
+
+
+
+/* ---------- HELPER CSS ---------- */
+
+.visually-hidden {
+	display: none;
+}
+h1 {
+	font-size: 0;
+
+}
+.tab-nav--fix {
+    position: fixed;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+/* ------------------ HEADER ----------------- */
+
+.header-work {
+	position: fixed;
+	z-index: 1;
+}
+.header-home {
+    height: 100vh;
+    border-bottom: 1px white solid;
+}
+.menubar {
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: rgba(0, 0, 0, 0.85);
+	border-bottom: .5px rgba(255, 255, 255, 0.3) solid;
+    position: fixed;
+    top: 0;
+}
+
+.nav-main {
+	flex-basis: 50%;
+}
+.nav-main-list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	list-style-type: none;
+}
+.nav-main-item {
+	font-family: 'aqua grotesque';
+	font-weight: 700;
+	font-size: 19px;
+	color: #311769;
+}
+.nav-logo {
+	width: 55px;
+}
+
+
+.nav-social {
+	flex-basis: 25%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 22px;
+
+}
+.nav-social li:not(:nth-child(1)) {
+	margin-left: 2.5em;
+}
+.left-fill {
+	flex-basis: 25%;
+}
+
+
+
+
+
+
+/* ----------- ABOUT HEADER ----------- */
+
+
+
+
+/* ------------------ MAIN ------------------ */
+
+
+/* ------- HOME MAIN ------ */
+.home-content {
+		padding-top: 15em;
+        max-width: 90%;
+        margin: 0 auto;
+
+}
+/* -------- ALL TABS --------- */
+.tab-section {
+	width: 100%;
+	text-align: center;
+}
+
+.tab-nav {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 1.5em;
+}
+
+.colorline {
+	background: linear-gradient(135deg, rgba(204,18,232,1) 0%, rgba(39,155,209,1) 100%);
+	width: 150px;
+	height: 6px;
+    margin-left: -5%;
+}
+.tab-nav i {
+	font-size: 25px;
+	margin-left: 1.5em;
+	color: #8d47df;
+}
+.section-heading {
+	font-family: 'aqua grotesque';
+	font-weight: 700;
+	color: #8d47df;
+	letter-spacing: 14px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	cursor: default;
+	font-size: 3em;
+}
+
+.tab-section span {
+	font-weight: 200;
+	font-size: 1.3rem;
+	font-style: italic;
+	color: #5528B5;
+
+}
+
+
+/* TXT TAB */
+
+.txt-tab-inner {
+	margin: 0 auto;
+	text-align: right;
+	margin-top: 2.5em;
+	line-height: 30px;
+	font-size: 20px;
+	max-width: 75%;
+	font-family: 'quicksand';
+	color: white;
+
+}
+.about-img-box {
+    text-align: left;
+}
+.about-img {
+    width: 175px;
+    margin-left: 20%;
+}
+
+/* ------ WORK-TAB ------- */
+
+.worktab {
+	margin-top: 11em;
+}
+
+.worktab-inner {
+	margin-top: 5em;
+	width: 100%;
+	font-family: 'quicksand';
+	text-transform: uppercase;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.work-item {
+    margin: 0;
+    padding: 0;
+    flex-basis: 30%;
+    margin-bottom: 100px;
+}
+
+.item-title {
+    display: block;
+
+}
+.item-img {
+    width: 75%;
+}
+
+
+
+/* ------ CONTACT-TAB ------- */
+
+.contact-tab {
+	margin-top: 15em;
+}
+
+.contact-tab-text {
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 2.5em;
+    line-height: 30px;
+    font-size: 20px;
+    max-width: 75%;
+    font-family: 'quicksand';
+    color: white;
+}
+.contact-tab-mail {
+	font-family: 'quicksand';
+	margin: 0 auto;
+}
+
+.contact-tab-inner a {
+	color: white;
+	transition: .2s ease;
+}
+.contact-tab-mail a:hover {
+	font-size: 1.2em;
+	transition: .2s ease;
+}
+
+/* ---------- ME MAIN ----------- */
+
+
+
+
+
+/* -------- FOOTER -------- */
+
+
+footer {
+		margin-top: 15em;
+}
