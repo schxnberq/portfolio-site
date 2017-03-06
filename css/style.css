@@ -77,8 +77,8 @@ ul, ol {
     z-index: 0;
     background: linear-gradient(to bottom, #cc12e8 0%, #279bd1 100%);
     background-attachment: fixed;
-
 }
+
 .homenav {
     width: 100%;
     display: flex;
