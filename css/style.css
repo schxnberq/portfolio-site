@@ -73,10 +73,10 @@ ul, ol {
 
 .home-page {
     height: 100vh;
-    border: 15px white solid;
-    z-index: 0;
+    /*border: 15px rgba(255, 255, 255, 0.8) solid;*/
     background: linear-gradient(to bottom, #cc12e8 0%, #279bd1 100%);
-    background-attachment: fixed;
+
+
 }
 
 .homenav {
@@ -159,17 +159,17 @@ ul, ol {
     opacity: 1;
 }
 .homenav--list:hover .list-item:not(:hover) a {
-    opacity: 0.6;
+    opacity: 0.75;
 }
 
 
 
 .home-headbox {
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 25vh;
     text-align: center;
-
-
+    position: relative;
+    z-index: 1;
 }
 .home-headline {
     font-family: 'aqua grotesque';
@@ -185,6 +185,7 @@ ul, ol {
     display: block;
     margin-top: 15px;
     font-size: 1.7rem;
+
 }
 .arrow-header {
     width: 100%;
@@ -193,7 +194,13 @@ ul, ol {
 .scroll-img {
     width: 165px;
 }
-
+.home-img {
+    width: 65%;
+    position: absolute;
+    z-index: 0;
+    left: 15%;
+    top:3%;
+}
 
 
 
