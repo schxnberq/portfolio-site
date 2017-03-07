@@ -73,18 +73,25 @@ ul, ol {
 
 .home-page {
     height: 100vh;
-    /*border: 15px rgba(255, 255, 255, 0.8) solid;*/
-    background: linear-gradient(to bottom, #cc12e8 0%, #279bd1 100%);
+    border-top: 10px rgba(0, 0, 0, 0.65) solid;
+    border-bottom: 10px rgba(0, 0, 0, 0.65) solid;
+    background: linear-gradient(135deg, rgb(195,195,195) 0%, rgb(150,150,150) 100%);
+
 
 
 }
-
+.home-wrapper {
+    display: flex;
+    justify-content:space-around;
+    flex-flow: row wrap;
+}
 .homenav {
     width: 100%;
     display: flex;
     align-items:center;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 .homenav--logo {
     padding-left: 50px;
@@ -159,7 +166,7 @@ ul, ol {
     opacity: 1;
 }
 .homenav--list:hover .list-item:not(:hover) a {
-    opacity: 0.75;
+    opacity: 0.5;
 }
 
 
@@ -195,11 +202,11 @@ ul, ol {
     width: 165px;
 }
 .home-img {
-    width: 65%;
+    width: 73%;
     position: absolute;
     z-index: 0;
-    left: 15%;
-    top:3%;
+    top: 5%;
+    left: 7%;
 }
 
 
