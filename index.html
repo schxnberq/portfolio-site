@@ -8,34 +8,44 @@
         <title>Niklas Schoenberger - Digital Artist</title>
         <meta name="description" content="Niklas Schoenberger - Digital Artist | Photomanipulation, Webdesign & Development">
         <link rel="icon" href="imgs/logo-b.png">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
         <link rel="stylesheet" href="css/style.css">
 
 
     </head>
 
 
-		<body>
-
-        <main class="home-page">
-            <section class="home-wrapper">
-                <nav class="homenav">
-                    <div class="homenav--logo">
-                        <a href="index.html"><img class="logo-img" src="imgs/logo-w.png" alt="logo"></a>
+    <body>
+        <header class="home-header">
+            <div class="header-cnt-home"></div>
+                <section class="header-wrapper">
+                    <div class="homenav--underline"></div>
+                    <div class="home-headbox">
+                        <h1 class="home-headline">Niklas Schoenberger</br> <span class="home-headline-descr">Digital Artist</span>
+                        </h1>
                     </div>
-                    <ul class="homenav--list">
-                        <li class="list-item"><a href="work.html">work</a></li>
-                        <li class="list-item"><a href="about.html">about</a></li>
-                        <li class="list-item"><a href="shop.html">shop</a></li>
-                        <li class="list-item"><a href="contact.html">contact</a></li>
-                    </ul>
-                </nav>
-                <div class="home-headbox">
-                    <h1 class="home-headline">Niklas Schoenberger</br> <span class="home-headline-descr">Digital Artist</span>
-                    </h1>
+                    <div class="scroll-cnt">
+                        <a href="#main" class="scroll-btn">
+                            <div class="mouse-icon"><span class="mousewheel"></span></div>
+                        </a>
+                    </div>
+                </section>
+        </header>
+
+        <main class="home-content" id="main">
+            <nav class="homenav">
+                <div class="homenav--logo">
+                    <a href="index.html"><img class="logo-img" src="imgs/logo-b.png" alt="logo"></a>
                 </div>
-                <img class="home-img" src="imgs/hornflowerthing-tny.png" alt="">
-            </section>
+                <ul class="homenav--list">
+                    <li class="list-item"><a href="work.html">work</a></li>
+                    <li class="list-item"><a href="about.html">about</a></li>
+                    <li class="list-item"><a href="shop.html">shop</a></li>
+                    <li class="list-item"><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+
 
 
         </main>

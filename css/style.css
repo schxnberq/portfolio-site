@@ -3,7 +3,6 @@
 html, body {
 	margin: 0;
 	padding: 0;
-
 }
 a {
 	text-decoration: none;
@@ -16,6 +15,7 @@ ul, ol {
 	list-style-type: none;
 	padding-left: 0;
 }
+
 /* --- FONTS --- */
 
 @font-face {
@@ -66,51 +66,142 @@ ul, ol {
 .tab-nav--fix {
     position: fixed;
 }
+.clearfix {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+
 
 
 /* ------------------ HEADER ----------------- */
-
-
-.home-page {
+.home-header {
     height: 100vh;
-    border-top: 10px rgba(0, 0, 0, 0.65) solid;
-    border-bottom: 10px rgba(0, 0, 0, 0.65) solid;
-    background: linear-gradient(135deg, rgb(195,195,195) 0%, rgb(150,150,150) 100%);
+}
+.header-cnt-home {
+   background-image: url(../imgs/hornflowerthing-tny.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
 
+.header-wrapper {
+    width: 100%;
+    height:100%;
+    text-align: center;
+    position: fixed;
+}
 
+.home-headbox {
+    padding-top: 35vh;
+}
+.home-headline {
+    font-family: 'aqua grotesque';
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    font-size: 3em;
+    color: white;
+    text-shadow: 3px 1.5px 5px black;
 
 }
-.home-wrapper {
+.home-headline-descr {
+    display: block;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+.scroll-cnt {
+    width: 100%;
+    position: fixed;
     display: flex;
-    justify-content:space-around;
-    flex-flow: row wrap;
+    justify-content: center;
+    bottom: 25px;
+    z-index: 1;
 }
+.mouse-icon {
+    width: 27px;
+    height: 43px;
+    border: 2px black solid;
+    border-radius: 25px;
+}
+.mousewheel {
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 6.5px;
+    border: 2px black solid;
+    border-radius: 45px;
+    margin-left: 10px;
+    margin-top:7px;
+    animation: mousewheel 3s ease infinite;
+
+}
+
+@-webkit-keyframes mousewheel {
+    25% {margin-top: 15px; opacity: 0;}
+    50% {margin-top: 7px; opacity: 0;}
+
+}
+@keyframes mousewheel {
+    25% {margin-top: 15px; opacity: 0;}
+    50% {margin-top: 7px; opacity: 0;}
+
+}
+
+
+
+
+/* ------------------ MAIN ------------------ */
+
+#main {
+    z-index: 2;
+    background: white;
+    position: absolute;
+
+}
+.home-content {
+    width: 100%;
+    height: 100vh;
+    background: rgba(235,235,235,0.5);
+    z-index: 1;
+}
+
 .homenav {
     width: 100%;
     display: flex;
-    align-items:center;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    background: rgba(244,244,244,0.3);
 }
+
 .homenav--logo {
     padding-left: 50px;
 }
 .logo-img {
     width: 55px;
-
 }
 
 .homenav--list {
     height: 44px;
     line-height: 46px;
-    padding-right: 50px;
     text-align: right;
     flex-basis: 40%;
     display: flex;
     justify-content: space-around;
     font-family: 'aqua grotesque';
-    color: white;
+    color: black;
+    padding-right: 50px;
+    z-index: 1;
+
 }
 
 .list-item {
@@ -123,11 +214,11 @@ ul, ol {
 .list-item:before {
     content: "";
     position: absolute;
-    width: 1px;
+    width: 2px;
     height: 44px;
     bottom: 0;
     left: 5px;
-    background: rgba(255, 255, 255, 0.75);
+    background: linear-gradient(to bottom, #cc12e8 0%,#279bd1 100%);
     transform: scaleY(0);
     -webkit-transition: all .35s ease;
     transition: all .35s ease;
@@ -139,11 +230,11 @@ ul, ol {
 .list-item:after {
     content: "";
     position: absolute;
-    width: 1px;
+    width: 2px;
     height: 44px;
     bottom: 0;
     right: 5px;
-    background: rgba(255, 255, 255, 0.75);
+    background: linear-gradient(to bottom, #cc12e8 0%,#279bd1 100%);
     transform: scaleY(0);
     -webkit-transition: all .35s ease;
     transition: all .35s ease;
@@ -171,131 +262,12 @@ ul, ol {
 
 
 
-.home-headbox {
-    width: 100%;
-    margin-top: 25vh;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-.home-headline {
-    font-family: 'aqua grotesque';
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    cursor: default;
-    font-size: 2.5em;
-    color: white;
-}
-.home-headline-descr {
-    display: block;
-    margin-top: 15px;
-    font-size: 1.7rem;
-
-}
-.arrow-header {
-    width: 100%;
-    margin-top: 33vh;
-}
-.scroll-img {
-    width: 165px;
-}
-.home-img {
-    width: 73%;
-    position: absolute;
-    z-index: 0;
-    top: 5%;
-    left: 7%;
-}
 
 
 
-
-
-
-
-/* ----------- ABOUT HEADER ----------- */
-
-
-
-
-/* ------------------ MAIN ------------------ */
-
-#main {
-    background: rgb(240, 240, 240);
-    z-index: 2;
-    position: absolute;
-    box-shadow: 10px 10px 5px black;
-}
 
 /* ------- HOME MAIN ------ */
 
-.menubar {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    background: rgba(255, 255, 255, 0.96);
-    position: fixed;
-    top: 0;
-    display: none;
-    z-index: 9;
-}
-.menu-fill {
-    flex-basis: 25%;
-    text-align: center;
-}
-.menu-fill img {
-    color: white;
-    width: 55px;
-    margin-left: 5em;
-    transform: rotate(180deg);
-}
-
-.menubar-logo {
-    flex-basis: 50%;
-    text-align: center;
-}
-.nav-logo {
-    width: 55px;
-}
-
-.nav-social {
-    flex-basis: 25%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 24px;
-}
-
-.nav-instagram:before {
-    content: '\ea92';
-    font-family: 'icomoon';
-}
-.nav-behance:before {
-    content: '\eaa8';
-    font-family: 'icomoon';
-}
-.nav-soundcloud:before {
-    content: '\eac3';
-    font-family: 'icomoon';
-}
-
-.nav-social li {
-    transition: transform .2s ease;
-}
-.nav-social li:not(:nth-child(1)) {
-    margin-left: 2.5em;
-}
-.nav-social li:hover {
-    transform: scale(1.25);
-}
 
 
 
