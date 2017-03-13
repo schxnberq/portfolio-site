@@ -63,9 +63,6 @@ ul, ol {
 	display: none;
 }
 
-.tab-nav--fix {
-    position: fixed;
-}
 .clearfix {
     content: ".";
     clear: both;
@@ -78,28 +75,103 @@ ul, ol {
 
 
 /* ------------------ HEADER ----------------- */
-.home-header {
+.home-content {
     height: 100vh;
-}
-.header-cnt-home {
-   background-image: url(../imgs/hornflowerthing-tny.jpg);
+    background-image: url(../imgs/flawless-flaws.png);
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
+
 }
 
-.header-wrapper {
+
+.homenav {
     width: 100%;
-    height:100%;
+    padding-top: 30px;
+}
+.homenav-list {
+    width: 90%;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-family: 'aqua grotesque';
+    color: white;
+}
+
+.list-item:not(:nth-child(3)) {
     text-align: center;
-    position: fixed;
+    width: 125px;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    transition: background .3s ease;
+}
+.list-item a {
+    display: block;
+}
+.nav-logo {
+    width: 50px;
+    transition: all .35s ease;
+}
+.nav-logo:hover {
+    transform: scale(1.1);
+}
+
+.list-item:not(:nth-child(3)):before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 44px;
+    bottom: 0;
+    left: 5px;
+    background: linear-gradient(to bottom, #cc12e8 0%,#279bd1 100%);
+    transform: scaleY(0);
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+}
+.list-item:hover:before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+.list-item:not(:nth-child(3)):after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 44px;
+    bottom: 0;
+    right: 5px;
+    background: linear-gradient(to bottom, #cc12e8 0%,#279bd1 100%);
+    transform: scaleY(0);
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+}
+.list-item:hover:after {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.list-item:not(:first-child) {
+    margin-left: 25px;
+}
+.list-item:hover {
+    opacity: 1;
+}
+.homenav--list:hover .list-item:not(:hover) a {
+    opacity: 0.5;
+}
+
+/* MAIN */
+
+
+
+.header-wrapper {
+    text-align: center;
+    padding-top: 20vh;
 }
 
 .home-headbox {
-    padding-top: 35vh;
+
 }
 .home-headline {
     font-family: 'aqua grotesque';
@@ -110,7 +182,7 @@ ul, ol {
     cursor: default;
     font-size: 3em;
     color: white;
-    text-shadow: 3px 1.5px 5px black;
+
 
 }
 .home-headline-descr {
@@ -130,15 +202,15 @@ ul, ol {
 .mouse-icon {
     width: 27px;
     height: 43px;
-    border: 2px black solid;
+    border: 2px white solid;
     border-radius: 25px;
 }
 .mousewheel {
     display: block;
     position: absolute;
     width: 2px;
-    height: 6.5px;
-    border: 2px black solid;
+    height: 7px;
+    border: 2px white solid;
     border-radius: 45px;
     margin-left: 10px;
     margin-top:7px;
@@ -156,266 +228,4 @@ ul, ol {
     50% {margin-top: 7px; opacity: 0;}
 
 }
-
-
-
-
-/* ------------------ MAIN ------------------ */
-
-#main {
-    z-index: 2;
-    background: white;
-    position: absolute;
-
-}
-.home-content {
-    width: 100%;
-    height: 100vh;
-    background: rgba(235,235,235,0.5);
-    z-index: 1;
-}
-
-.homenav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(244,244,244,0.3);
-}
-
-.homenav--logo {
-    padding-left: 50px;
-}
-.logo-img {
-    width: 55px;
-}
-
-.homenav--list {
-    height: 44px;
-    line-height: 46px;
-    text-align: right;
-    flex-basis: 40%;
-    display: flex;
-    justify-content: space-around;
-    font-family: 'aqua grotesque';
-    color: black;
-    padding-right: 50px;
-    z-index: 1;
-
-}
-
-.list-item {
-    text-align: center;
-    width: 125px;
-    position: relative;
-    transition: background .3s ease;
-
-}
-.list-item:before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 44px;
-    bottom: 0;
-    left: 5px;
-    background: linear-gradient(to bottom, #cc12e8 0%,#279bd1 100%);
-    transform: scaleY(0);
-    -webkit-transition: all .35s ease;
-    transition: all .35s ease;
-}
-.list-item:hover:before {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-}
-.list-item:after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 44px;
-    bottom: 0;
-    right: 5px;
-    background: linear-gradient(to bottom, #cc12e8 0%,#279bd1 100%);
-    transform: scaleY(0);
-    -webkit-transition: all .35s ease;
-    transition: all .35s ease;
-}
-.list-item:hover:after {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-}
-
-.list-item a {
-    display: block;
-    transition: all 0.5s ease;
-
-}
-
-.list-item:not(:first-child) {
-    margin-left: 25px;
-}
-.list-item:hover {
-    opacity: 1;
-}
-.homenav--list:hover .list-item:not(:hover) a {
-    opacity: 0.5;
-}
-
-
-
-
-
-
-
-/* ------- HOME MAIN ------ */
-
-
-
-
-
-/* -------- TAB SECTIONS --------- */
-.main-content {
-    padding-top: 10em;
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.tab-section {
-	width: 100%;
-	text-align: center;
-}
-
-.tab-nav {
-    padding-top: 15px;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	margin-bottom: 1.5em;
-}
-
-.colorline {
-	background: linear-gradient(135deg, rgba(204,18,232,1) 0%, rgba(39,155,209,1) 100%);
-	width: 150px;
-	height: 6px;
-
-}
-.tab-nav i {
-	font-size: 25px;
-	margin-left: 1.5em;
-}
-.section-heading {
-	font-family: 'aqua grotesque';
-	font-weight: 700;
-	color: #8d47df;
-	letter-spacing: 14px;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 0;
-	cursor: default;
-	font-size: 3em;
-}
-
-.tab-section span {
-	font-weight: 200;
-	font-size: 1.3rem;
-	font-style: italic;
-	color: #5528B5;
-}
-
-
-/* TXT TAB */
-
-.about-tab {
-
-}
-
-.about-tab-inner {
-	margin: 0 auto;
-	text-align: right;
-	margin-top: 2.5em;
-	line-height: 17px;
-	font-size: 16px;
-	max-width: 55%;
-	font-family: 'quicksand';
-	color: black;
-
-}
-
-
-/* ------ WORK-TAB ------- */
-
-.worktab {
-	margin-top: 11em;
-}
-
-.worktab-inner {
-	margin-top: 5em;
-	width: 100%;
-	font-family: 'raleway-light';
-	font-weight: 200;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-}
-.work-item {
-    margin: 0;
-    padding: 0;
-    flex-basis: 30%;
-    margin-bottom: 100px;
-}
-
-.work-item:hover .item-title {
-    transform: scale(1.1);
-}
-
-.item-title {
-    display: block;
-    font-size: 14px;
-    transition: transform .2s ease;
-
-}
-.item-img {
-    width: 75%;
-}
-
-
-
-/* ------ CONTACT-TAB ------- */
-
-.contact-tab {
-	margin-top: 15em;
-    padding-bottom: 5em;
-}
-
-.contact-tab-text {
-    margin: 0 auto;
-    text-align: left;
-    margin-top: 2.5em;
-    line-height: 24px;
-    font-size: 17px;
-    max-width: 65%;
-    font-family: 'raleway-light';
-    color: black;
-}
-.contact-tab-mail {
-	font-family: 'raleway-light';
-	margin: 0 auto;
-    margin-top: 50px;
-}
-
-.contact-tab-inner a {
-	color: black;
-	transition: .2s ease;
-}
-.contact-tab-mail a:hover {
-	font-size: 1.2em;
-	transition: .2s ease;
-}
-
-/* ---------- ME MAIN ----------- */
-
-
-
-
-
-/* -------- FOOTER -------- */
 
